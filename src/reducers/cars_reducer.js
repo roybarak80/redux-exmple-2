@@ -1,5 +1,18 @@
-export default function(state=null,action){
-console.log(action);
+export default function (state = {}, action) {
 
-    return state;
+    switch (action.type) {
+        case 'SEARCH_CARS':
+    
+        return {...state,list:action.payload};
+
+        case 'CAR_DETAIL':
+            return { ...state, detail: action.payload }
+
+        case 'GET_CARS':
+        return {...state,list:action.payload};
+        default:
+            return state
+    }
+
+
 }

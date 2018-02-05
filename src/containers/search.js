@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {connect } from 'react-redux';
 import { getCars} from '../actions';
+import { getAllCars} from '../actions';
 import { bindActionCreators} from 'redux';
 
 
@@ -9,7 +10,8 @@ class Search extends Component {
         super(props)
     
         this.state = {
-            keyword:''
+            keyword:'',
+            car_list:''
         }
     }
 
@@ -28,11 +30,23 @@ class Search extends Component {
     }
 
     componentDidMount(){
+        this.setState({
+            car_list: 12
+        })
+       
+
         console.log(this.state)
     }
 
+  
+    getCarsList(){
+        this.props.getAllCars()
+    }
+
     render() {
+       
         return (
+            
             <div className="main_search">
                 <form onSubmit={this.searchCars}>
                     <input type="text" value={this.state.keyword} onChange={this.handleChange}/>
