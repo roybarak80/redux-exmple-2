@@ -38,7 +38,7 @@ export function getAllCars(){
     
  return {
     type:'GET_CARS',
-    payload:123
+    payload:request
  }
     
 }
