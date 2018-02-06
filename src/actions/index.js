@@ -28,17 +28,9 @@ export function carDetail(id){
     
 }
 
-export function getAllCars(){
-
-    const request = fetch(`${URL_ROOT}/carsIndex`,
-    { method:'GET'})
-    .then(response => response.json()
-)
-  
-    
- return {
-    type:'GET_CARS',
-    payload:123
- }
-    
+export function clearDetail(){
+    return{
+        type:'CLEAR_DETAIL',
+        payload:[]
+    }
 }

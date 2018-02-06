@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {connect } from 'react-redux';
 import { getCars} from '../actions';
-import { getAllCars} from '../actions';
+
 import { bindActionCreators} from 'redux';
 
 
@@ -29,19 +29,7 @@ class Search extends Component {
         })
     }
 
-    componentDidMount(){
-        this.setState({
-            car_list: 12
-        })
-       
-
-        console.log(this.state)
-    }
-
-  
-    getCarsList(){
-        this.props.getAllCars()
-    }
+   
 
     render() {
        
