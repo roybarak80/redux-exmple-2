@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Carslist from '../containers/index_list';
+
 import Search from '../containers/search';
 import ListOfCars from '../containers/list_of_cars';
 
