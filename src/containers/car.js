@@ -10,11 +10,8 @@ class Car extends Component {
     }
 
     renderDetail = ({detail}) => {
-        console.log('fgffgf'+this.props.cars);
-        
         if(detail){
 return detail.map((item)=>{
-   
 return(
 
     <div className="col-md-6" key={item.id}>

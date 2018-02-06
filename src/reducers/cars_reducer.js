@@ -9,7 +9,7 @@ export default function (state = {}, action) {
             return { ...state, detail: action.payload }
 
         case 'GET_CARS':
-        return {...state,carlist:action.payload};
+        return {...state,list:action.payload};
         default:
             return state
     }
